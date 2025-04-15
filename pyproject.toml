@@ -1,0 +1,12 @@
+[project]
+name = "wpdetective"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "beautifulsoup4>=4.13.4",
+    "requests>=2.32.3",
+    "streamlit>=1.44.1",
+    "urllib3==1.26.15",
+]
