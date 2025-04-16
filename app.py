@@ -28,7 +28,6 @@ def get_businesses(query, location, max_pages=1):
 
             # Try with select instead of find_all
             cards = soup.select("a.searchresult")
-            st.write(f"[DEBUG] {len(cards)} kaarten gevonden op pagina {page}")
 
             if len(cards) == 0:
                 st.warning(f"[DEBUG] Geen resultaten gevonden op pagina {page}. Check 'pagina{page}.html'")
@@ -48,8 +47,7 @@ def get_businesses(query, location, max_pages=1):
                     businesses.append({
                         "Bedrijfsnaam": name,
                         "Website": website,
-                        "Telefoonnummer": phone,
-                        "Omschrijving": description
+                        "Telefoonnummer": phone
                     })
 
                 time.sleep(0.5)
